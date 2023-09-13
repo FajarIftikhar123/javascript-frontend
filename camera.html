@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Capture</title>
+    <link rel="stylesheet" type="text/css" href="./css/camera.css">
+</head>
+<body>
+    <h1>Camera Capture</h1>
+    <video id="camera-preview" autoplay></video>
+    <button id="capture-button">Capture Image</button>
+
+    <script>
+        const video = document.getElementById('camera-preview');
+        const captureButton = document.getElementById('capture-button');
+
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+            } catch (error) {
+                console.error('Error accessing camera:', error);
+            }
+        }
+
+     
+        captureButton.addEventListener('click', async () => {
+            const stream = video.srcObject;
+            if (stream) {
+                const tracks = stream.getTracks();
+                tracks.forEach(track => track.stop());
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageData = canvas.toDataURL('image/jpeg'); 
+
+//local storage
+            console.log('Captured Image Data:', imageData);
+        });
+    </script>
+</body>
+</html>
+

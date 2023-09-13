@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+   <!-- Make a user login and sign up form:
+        1) login page contain email and password field and login and sign up button. Must apply validation on on input field and password field have password Hide and show icon.
+        2) On clicking Sign Up Button user route to sign up form .
+        3) Sign Up form Contains : FirstName, LastName, Email, Password, Address, Phone, Image Upload and Live Image capturing fields.
+        4) The User have to upload image or capture his image through camera
+        5) on clicking "Picture through camera Option" which will be live image capturing by your camera, it open an iframe which showing your live image as same as we use camera and now by clicking "capture image" the image is capture and camera will be turn off and image by camera is uploaded.
+        5) Now by clicking Sign Up button the information in signup form with image will store into local storage. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <head>
+    
+
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <body>
+        <form id="login-form">
+            <h1>  Login Form</h1>
+            <input type="email" id= "email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <i class="fa fa-eye-slash" id="password-toggle"></i>
+            <button type="submit">Login</button>
+            <button   id="signup-button" >Sign Up   </button>
+        </form>
+        <!-- for validation it will go to the script.js -->
+        <script src="script.js"></script> 
+    </body>
+    </html>

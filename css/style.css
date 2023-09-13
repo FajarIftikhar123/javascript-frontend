@@ -1,0 +1,168 @@
+ /* loginform */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #FFC0CB,#800080);
+    margin: 0;
+    padding: 0;
+}
+
+
+#login-form {
+    width: 370px;
+    height: 350px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding:  90px 80px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    border-color: aqua;
+}
+
+/* Style input fields */
+input[type="email"],
+input[type="password"] {
+    width: 340px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* toggle hide r show k liye use hota ha  */
+#password-toggle {
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Style the buttons */
+button[type="submit"],
+#signup-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+#signup-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/*  toggle icon ==> passward usage  */
+.fa-eye,
+.fa-eye-slash {
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    cursor: pointer;
+}
+/* ************ */
+
+
+#signup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Reset button styles */
+button:focus {
+    outline: none;
+}
+
+/* Add responsive styles for smaller screens */
+@media screen and (max-width: 600px) {
+    #login-form {
+        width: 90%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Login Page Styles */
+#login-form {
+    text-align: center;
+}
+
+#password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#signup-form {
+    text-align: center;
+}
+
+#camera-button {
+    background-color: #28a745;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%;
+    }
+
+    input, textarea, button {
+        width: 100%;
+    }
+}
