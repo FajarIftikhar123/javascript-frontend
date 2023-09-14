@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
+<!-- 3) Sign Up form Contains : FirstName, LastName, Email, 
+    Password, Address, Phone, Image Upload and Live Image capturing fields. -->
 <body>
     
     <form id="signup-form">
 
         <h1> SignUp Form</h1>
-        <input type="text" id="firstName" placeholder="First Name">
-        <input type="text" id="lastName" placeholder="Last Name">
-        <input type="email" id="signupEmail" placeholder="Email">
-        <input type="password" id="signupPassword" placeholder="Password">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
         <textarea id="address" placeholder="Address"></textarea>
-        <input type="tel" id="phone" placeholder="Phone">
-        <input type="file" id="imageUpload" accept="image/*">
+        <input type="tel" id="phone" placeholder="Phone" required>
+        <input type="file" id="imageUpload" accept="image/*" required>
         <button id="camera-button">
             <i class="fas fa-camera"></i> Live Img Capturing by Camera
         </button>
-        <button type="submit">Sign Up</button>
+        <button type="submit"  onclick="signup()" >Sign Up</button>
     </form>
    
     <script src="script.js"></script>
