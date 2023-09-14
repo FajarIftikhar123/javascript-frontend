@@ -38,7 +38,7 @@ input[type="password"] {
     cursor: pointer;
 }
 
-/* Style the buttons */
+
 button[type="submit"],
 #signup-button {
     width: 100%;
@@ -84,7 +84,7 @@ button:focus {
     outline: none;
 }
 
-/* Add responsive styles for smaller screens */
+/* //responsive */
 @media screen and (max-width: 600px) {
     #login-form {
         width: 90%;
@@ -135,7 +135,7 @@ button {
     font-size: 18px;
 }
 
-/* Login Page Styles */
+/* /* Login  */
 #login-form {
     text-align: center;
 }
@@ -156,13 +156,13 @@ button {
     background-color: #28a745;
 }
 
-/* Responsive Styles */
+/* Responsive  */
 @media (max-width: 600px) {
     .container {
-        max-width: 90%;
+        max-width: 80%;
     }
 
     input, textarea, button {
-        width: 100%;
+        width: 15px;
     }
 }

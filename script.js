@@ -2,20 +2,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
-    const passwordToggle = document.getElementById("password-toggle");
+    const passwordToggle = document.getElementById("password_Toggle");
     const loginForm = document.getElementById("login-form");
 
     // icon sign
     passwordToggle.addEventListener("click", function () {
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
-            passwordToggle.classList.remove("fa-eye-slash");
+            passwordToggle.classList.remove("fa-eye-slash");//
             passwordToggle.classList.add("fa-eye");
         } else {
             passwordInput.type = "password";
             passwordToggle.classList.remove("fa-eye");
             passwordToggle.classList.add("fa-eye-slash");
         }
+        
     });
 
     // Add event listener for login
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault(); 
 
         // To Validate the req of  email and password fields
-        const emailValue = emailInput.value.trim();
+        const emailValue = emailInput.value.trim();// trim to reemove spaces,tabs lines
         const passwordValue = passwordInput.value.trim();
 
         if (!emailValue || !isValidEmail(emailValue)) {
@@ -40,8 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         
         if (isValidEmail(emailValue) && passwordValue) {
-            
+            localStorage.setItem("loginForm", JSON.stringify(loginForm));// add data to the local storage 
+            console.log(loginForm);
         }
+
+       
+
     });
 //js for format
     // Function to validate email format
@@ -82,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //when click on pic button it will go in camera page
 
 // script.js
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function run () {
     const cameraButton = document.getElementById("camera-button");
 
     cameraButton.addEventListener("click", function () {
